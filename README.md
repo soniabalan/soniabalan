@@ -1,0 +1,4 @@
+- 👋 Hi, I’m @soniabalan
+- 👀 I’m interested in biological systems
+- 🌱 I’m currently learning biology (at a Bachelor's level)
+- 📫 How to reach me soniaa.balan@gmail.com
