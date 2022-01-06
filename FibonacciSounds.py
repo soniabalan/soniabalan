@@ -64,32 +64,48 @@ def main():
 
     music_notes ='d' # fibonacci sequence starts with 0
     fib_seq = '112358132134558914423337761098715972584418167651094617711286574636875025'
-    for nr in fib_seq:
-        if nr==str(0):
-            music_notes+='-d'
-        elif nr=='1':
-            music_notes+='-E'
-        elif nr=='2':
-            music_notes+='-f'
-        elif nr=='3':
-            music_notes+='-g'
-        elif nr=='4':
-            music_notes+='-A'
-        elif nr=='5':
-            music_notes+='-B'
-        elif nr=='6':
-            music_notes+='-h'
-        elif nr=='7':
-            music_notes+='-i'
-        elif nr=='8':
-            music_notes+='-J'
-        elif nr=='9':
-            music_notes+='-k'
+    pi_seq = '3.1415926535897932384626433832795028841971693993751'
+    abacaba = 'A-B-A-C-A-B-A-D-A-B-A-C-A-B-A-E-A-B-A-C-A-B-A-D-A-B-A-C-A-B-A-F-A-B-A-C-A-B-A-D-A-B-A-C-A-B-A-E-A-B-A-C-A-B-A-D-A-B-A-C-A-B-A'
+    phi_seq = '1.80339887 4989484820 4586834365 6381177203 0917980576'
+    
+    magic_number = fib_seq
+    
+    if magic_number != abacaba: 
+        for nr in fib_seq:
+            if nr==str(0):
+                music_notes+='-d'
+            elif nr=='1':
+                music_notes+='-E'
+            elif nr=='2':
+                music_notes+='-f'
+            elif nr=='3':
+                music_notes+='-g'
+            elif nr=='4':
+                music_notes+='-A'
+            elif nr=='5':
+                music_notes+='-B'
+            elif nr=='6':
+                music_notes+='-h'
+            elif nr=='7':
+                music_notes+='-i'
+            elif nr=='8':
+                music_notes+='-J'
+            elif nr=='9':
+                music_notes+='-k'
+    else:
+        music_notes = abacaba
 
     # print(music_notes)
     data = get_song_data(music_notes)
     data = data * (16300/np.max(data)) # Adjusting the Amplitude (Optional)
-    write('fibonacci_sounds.wav', samplerate, data.astype(np.int16))
+    if magic_number == fib_seq:
+        write('fibonacci_sounds.wav', samplerate, data.astype(np.int16))
+    elif magic_number==pi_seq:
+        write('pi_sounds.wav', samplerate, data.astype(np.int16))
+    elif magic_number==abacaba:
+        write('abacaba_sounds.wav', samplerate, data.astype(np.int16))
+    elif magic_number == phi_seq:
+        write('phi_sounds.wav', samplerate, data.astype(np.int16))
 
     
 if __name__=='__main__':
