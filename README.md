@@ -1,4 +1,3 @@
 - 👋 Hi, I’m @soniabalan
-- 👀 I’m interested in biological systems
-- 🌱 I’m currently learning biology (at a Bachelor's level)
+- 🌱 Systems Biology Master's student at Maastricht University
 - 📫 How to reach me soniaa.balan@gmail.com
